@@ -18,7 +18,7 @@ export class UsersService {
     if (emailTaken)
       throw new ConflictException('This email is already in use.');
 
-    const hashedPassword = await hash(password, 8);
+    const hashedPassword = await hash(password, 12);
 
     const user = await this.usersRepo.create({
       data: {
