@@ -10,7 +10,7 @@ export class UsersRepository {
     return this.prismaService.user.create(createDto);
   }
 
-  findUnique(findUnique: Prisma.UserFindUniqueArgs) {
+  async findUnique(findUnique: Prisma.UserFindUniqueArgs) {
     return this.prismaService.user.findUnique(findUnique);
   }
 }
